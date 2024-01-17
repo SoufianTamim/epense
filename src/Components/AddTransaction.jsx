@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { GlobalContext } from "../Context/GlobalState";
 import ExportToExcelButton from "./ExportToExcelButton";
+import ImprtJsonFile from "./ImprtJsonFile";
 
 
 
@@ -41,7 +42,8 @@ const AddTransaction = () => {
         </div>
         <button className="btn">Add transaction</button>
       </form>
-        <ExportToExcelButton />
+      <ExportToExcelButton />
+      <ImprtJsonFile />
     </>
   );
 };
