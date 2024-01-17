@@ -1,8 +1,8 @@
 import Balance from "./Components/Balance"
 import Header from "./Components/Header"
 import IncomeExpenses from "./Components/IncomeExpenses"
-import TransactionList from "./Components/transactionList"
-import AddTransaction from "./Components/addTransaction"
+import TransactionList from "./Components/TransactionList"
+import AddTransaction from "./Components/AddTransaction"
 import { GlobalProvider } from "./Context/GlobalState"
 import './CSS/App.css'
 
