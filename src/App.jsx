@@ -1,4 +1,4 @@
-import Balance from "./Components/balance"
+import Balance from "./Components/Balance"
 import Header from "./Components/Header"
 import IncomeExpenses from "./Components/IncomeExpenses"
 import TransactionList from "./Components/transactionList"
