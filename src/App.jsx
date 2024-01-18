@@ -9,12 +9,16 @@ import './CSS/App.css'
 function App() {
   return (
     <GlobalProvider>
-      <Header/>
+        <Header/>
       <div className="container">
-        <Balance/>
-        <IncomeExpenses/>
-        <TransactionList/>
-        <AddTransaction/>
+        <div id="cont1">
+          <Balance/>
+          <IncomeExpenses/>
+          <AddTransaction/>
+        </div>
+        <div id="cont2">
+          <TransactionList/>
+        </div>
       </div>
     </GlobalProvider>
   )
