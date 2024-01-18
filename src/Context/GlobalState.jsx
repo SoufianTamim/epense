@@ -16,9 +16,14 @@ function Reducer(state, action) {
       return {
         transactions: [...state.transactions, action.value],
       };
+    case "clearTransactions":
+      return {
+        transactions: [],
+      };
     default:
       return state;
   }
+
 }
 
 export const GlobalProvider = ({ children }) => {
@@ -42,5 +47,9 @@ export const GlobalProvider = ({ children }) => {
     dispatch({ type: "addTransaction", value: transaction });
   }
 
-  return <GlobalContext.Provider  value={{ transactions: state.transactions, deleteTransaction, addTransaction }}>{children}</GlobalContext.Provider>;
+  function clearTransactions() {
+    dispatch({ type: "clearTransactions" });
+  }
+
+  return <GlobalContext.Provider value={{ transactions: state.transactions, deleteTransaction, addTransaction, clearTransactions }}>{children}</GlobalContext.Provider>;
 };

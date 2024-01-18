@@ -10,6 +10,7 @@ import ImprtJsonFile from "./ImprtJsonFile";
 
 const AddTransaction = () => {
   const { transactions, addTransaction } = useContext(GlobalContext);
+
   const [text, setText] = useState("");
   const [amount, setAmount] = useState(0);
 
@@ -30,6 +31,7 @@ const AddTransaction = () => {
     setAmount("");
   }
 
+
   return (
     <>
       <h3>new transaction</h3>
@@ -40,10 +42,11 @@ const AddTransaction = () => {
         <div className="form-control">
           <input type="number" value={amount} onChange={(e) => setAmount(e.target.value)} id="amount" placeholder="Enter amount..." />
         </div>
-        <button className="btn">Add transaction</button>
+        <button className="btn">Add Operation</button>
       </form>
       <ExportToExcelButton />
       <ImprtJsonFile />
+
     </>
   );
 };
